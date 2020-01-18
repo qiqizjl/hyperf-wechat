@@ -7,8 +7,8 @@
 ~~~shell script
 composer require naixiaoxin/hyperf-wechat
 ~~~
+!!! danger "目前不兼容**hyperf/super-globals**"
 
->[warning] 目前不兼容**hyperf/super-globals**
 
 ## 配置
 1. 发布配置文件
