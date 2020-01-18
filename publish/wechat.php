@@ -17,14 +17,13 @@ return [
          */
         'response_type' => 'array',
         // 日志
-        'log'           => [
-            'default'  => 'single',
+        'log' => [
+            'default' => 'single',
             'channels' => [
                 'single' => [
                     'driver' => env('WECHAT_LOG_DRIVER', 'errorlog'),
-                    'level'  => env('WECHAT_LOG_LEVEL', 'debug'),
-                    'path'   => env('WECHAT_LOG_DRIVER', BASE_PATH . "/runtime/logs/hyperf.log"),
-
+                    'level' => env('WECHAT_LOG_LEVEL', 'debug'),
+                    'path' => env('WECHAT_LOG_DRIVER', BASE_PATH . '/runtime/logs/hyperf.log'),
                 ],
             ],
         ],
@@ -33,14 +32,13 @@ return [
     'official_account' => [
         'default' => [
             // AppID
-            'app_id'  => env('WECHAT_OFFICIAL_ACCOUNT_APPID', 'your-app-id'),
+            'app_id' => env('WECHAT_OFFICIAL_ACCOUNT_APPID', 'your-app-id'),
             // AppSecret
-            'secret'  => env('WECHAT_OFFICIAL_ACCOUNT_SECRET', 'your-app-secret'),
+            'secret' => env('WECHAT_OFFICIAL_ACCOUNT_SECRET', 'your-app-secret'),
             // Token
-            'token'   => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'your-token'),
+            'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'your-token'),
             // EncodingAESKey
             'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', ''),
-
         ],
     ],
     //第三方开发平台

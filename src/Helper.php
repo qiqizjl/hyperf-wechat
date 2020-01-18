@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 /**
+ * This file is part of Hyperf.
  *
- *
- * @author    耐小心 <i@naixiaoixn.com>
- * @time      2020/1/18 12:49 上午
- *
- * @copyright 2019 耐小心
+ * @link     https://www.hyperf.io
+ * @document https://doc.hyperf.io
+ * @contact  group@hyperf.io
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
 namespace Naixiaoxin\HyperfWechat;
 
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Hyperf\Utils\Context;
-use Symfony\Component\HttpFoundation\Response;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 class Helper
 {

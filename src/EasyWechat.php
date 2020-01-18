@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 /**
+ * This file is part of Hyperf.
  *
- *
- * @author    耐小心 <i@naixiaoixn.com>
- * @time      2020/1/19 3:19 上午
- *
- * @copyright 2019 耐小心
+ * @link     https://www.hyperf.io
+ * @document https://doc.hyperf.io
+ * @contact  group@hyperf.io
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
 namespace Naixiaoxin\HyperfWechat;
@@ -15,9 +15,8 @@ namespace Naixiaoxin\HyperfWechat;
 use Hyperf\Utils\ApplicationContext;
 
 /**
- * Class EasyWechat
+ * Class EasyWechat.
  *
- * @package Naixiaoxin\HyperfWechat
  * @method static \EasyWeChat\OfficialAccount\Application  officialAccount(string $name = "default", array $config = [])
  * @method static \EasyWeChat\Work\Application  work(string $name = "default", array $config = [])
  * @method static \EasyWeChat\MiniProgram\Application  miniProgram(string $name = "default", array $config = [])
@@ -28,11 +27,8 @@ use Hyperf\Utils\ApplicationContext;
  */
 class EasyWechat
 {
-
     public static function __callStatic($functionName, $args)
     {
-        return ApplicationContext::getContainer()->get(Factory::class)->$functionName(...$args);
+        return ApplicationContext::getContainer()->get(Factory::class)->{$functionName}(...$args);
     }
-
-
 }
