@@ -13,7 +13,7 @@ composer require naixiaoxin/hyperf-wechat
 ## 配置
 1. 发布配置文件
 ~~~shell script
-php artisan vendor:publish --provider="Overtrue\LaravelWeChat\ServiceProvider"
+php ./bin/hyperf.php vendor:publish naixiaoxin/hyperf-wechat
 ~~~
 2. 修改应用根目录下的 `config/autoload/wechat.php` 中对应的参数即可。
 3. 每个模块基本都支持多账号，默认为 `default`。
