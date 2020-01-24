@@ -7,7 +7,6 @@
 ~~~shell script
 composer require naixiaoxin/hyperf-wechat
 ~~~
-<span style="color:#F00"><b>目前不兼容hyperf/super-globals</b></span>
 
 
 ## 配置
