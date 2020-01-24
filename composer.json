@@ -22,7 +22,7 @@
         "php": ">=7.2",
         "ext-swoole": ">=4.4",
         "hyperf/guzzle": "^1.1",
-        "naixiaoxin/hyperf-super-globals": "^1.1.0",
+        "hyperf/super-globals": "^1.1",
         "overtrue/wechat": "^4.2"
     },
     "require-dev": {
