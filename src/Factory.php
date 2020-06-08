@@ -69,7 +69,7 @@ class Factory
     {
         $accountName = $args[0] ?? 'default';
         $accountConfig = $args[1] ?? [];
-        if (! isset($this->configMap[$functionName])) {
+        if (!isset($this->configMap[$functionName])) {
             throw new \Exception('方法不存在');
         }
         $configName = $this->configMap[$functionName];
@@ -104,7 +104,7 @@ class Factory
             [],
             $request->getCookieParams(),
             $request->getUploadedFiles(),
-            $_SERVER->toArray(),
+            is_array($_SERVER) ? $_SERVER : $_SERVER->toArray(),
             $request->getBody()->getContents()
         );
     }
