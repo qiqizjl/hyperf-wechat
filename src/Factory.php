@@ -98,13 +98,19 @@ class Factory
     {
         $request = $this->container->get(RequestInterface::class);
         //return $this->container->get(RequestInterface::class);
+        $uploadFiles = $request->getUploadedFiles() ?? [];
+        $files = [];
+        foreach ($uploadFiles as $k => $v) {
+            $files[$k] = $v->toArray();
+        }
         return new Request(
             $request->getQueryParams(),
             $request->getParsedBody(),
             [],
             $request->getCookieParams(),
-            $request->getUploadedFiles(),
-            is_array($_SERVER) ? $_SERVER : $_SERVER->toArray(),
+            $files,
+            $request->getServerParams(),
+//             is_array($_SERVER) ? $_SERVER : $_SERVER->toArray(),
             $request->getBody()->getContents()
         );
     }
